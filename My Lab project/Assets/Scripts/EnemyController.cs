@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {  
-    private SpriteRenderer sr;
+    public SpriteRenderer sr;
     public float maxSpeed = 2; 
     public int damage = 1; 
     // Start is called before the first frame update
@@ -15,7 +15,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
     public void Flip()
     {
-                sr.flipX= !sr.flipX;
+                sr.flipX=!sr.flipX;
 
     }
 void OnTriggerEnter2D(Collider2D other){

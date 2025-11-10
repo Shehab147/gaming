@@ -29,7 +29,7 @@ public class playerStats : MonoBehaviour
             filckerTime =0;
         }
     }
-void TakeDamage(int damage){
+public void TakeDamage(int damage){
 
 if (isImmune == false){
 
@@ -37,7 +37,7 @@ health -= damage;
 if(health<0)health=0;
 if (lives>0&& health==0){
 
-    FindObjectOfType<LevelManger>().RespawnPlayer();
+    FindObjectOfType<LevelManager>().PlayerRespawn();
     health =3;
     lives--;
 }
